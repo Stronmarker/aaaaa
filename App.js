@@ -3,6 +3,13 @@ import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native-elements'; // Import des éléments de React Native Elements
+import ParcoursScreen from './Parcours';
+import CommunauteScreen from './Communaute';
+import JournalScreen from './Journal';
+import QuotidienScreen from './Quotidien';
+import SuccesScreen from './Succes';
+import AntistressScreen from './Antistress';
+import HistoireScreen from './Histoire';
 
 // Définition des écrans et des composants
 function AccueilScreen({ navigation }) {
@@ -50,6 +57,13 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Accueil" component={AccueilScreen} />
+        <Stack.Screen name="Parcours" component={ParcoursScreen} />
+        <Stack.Screen name="Communauté" component={CommunauteScreen} />
+        <Stack.Screen name="Journal" component={JournalScreen} />
+        <Stack.Screen name="Quotidien" component={QuotidienScreen} />
+        <Stack.Screen name="Succès" component={SuccesScreen} />
+        <Stack.Screen name="Anti-stress" component={AntistressScreen} />
+        <Stack.Screen name="Histoire" component={HistoireScreen} />
         {/* Ajoutez les autres écrans ici */}
       </Stack.Navigator>
     </NavigationContainer>

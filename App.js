@@ -64,7 +64,7 @@ function App() {
         <Stack.Screen name="Communauté" component={CommunauteScreen} />
         <Stack.Screen name="Journal" component={JournalScreen} />
         <Stack.Screen name="Quotidien" component={QuotidienScreen} />
-        <Stack.Screen name="Succes" component={SuccesScreen} />
+        <Stack.Screen name="Succès" component={SuccesScreen} />
         <Stack.Screen name="Anti-stress" component={AntistressScreen} />
         <Stack.Screen name="Histoire" component={HistoireScreen} />
         {/* Ajoutez d'autres écrans ici si nécessaire */}

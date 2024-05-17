@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function CommunauteScreen() {
+function RdvScreen() {
   return (
     <View>
-      <Text>Chat Screen</Text>
+      <Text>RDV Screen</Text>
     </View>
   );
 }
 
-export default CommunauteScreen;
+export default RdvScreen;

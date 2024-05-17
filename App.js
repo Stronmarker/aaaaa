@@ -10,6 +10,7 @@ import QuotidienScreen from './Quotidien';
 import SuccesScreen from './Succes';
 import AntistressScreen from './Antistress';
 import HistoireScreen from './Histoire';
+import RdvScreen from './Rdv';
 
 // Définition des écrans et des composants
 function AccueilScreen({ navigation }) {
@@ -21,14 +22,14 @@ function AccueilScreen({ navigation }) {
         <Text>Autre texte ici</Text>
       </View>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <CustomButton title="ACCÈS PARCOURS" onPress={() => navigation.navigate('Parcours')} />
-        <CustomButton title="ACCÈS COMMUNAUTÉ" onPress={() => navigation.navigate('Communauté')} />
-        <CustomButton title="ACCÈS JOURNAL" onPress={() => navigation.navigate('Journal')} />
-        <CustomButton title="ACCÈS QUOTIDIEN" onPress={() => navigation.navigate('Quotidien')} />
-        <CustomButton title="ACCÈS SUCCÈS" onPress={() => navigation.navigate('Succès')} />
-        <CustomButton title="ACCÈS ANTI-STRESS" onPress={() => navigation.navigate('Anti-stress')} />
-        <CustomButton title="ACCÈS HISTOIRE" onPress={() => navigation.navigate('Histoire')} />
-        <CustomButton title="CHANGER RDV" onPress={() => Alert.alert("Pop-up : mood du jour (1 fois/jour)")} />
+        <CustomButton title="MES PARCOURS" onPress={() => navigation.navigate('Parcours')} />
+        <CustomButton title="LA COMMUNAUTÉ" onPress={() => navigation.navigate('Communauté')} />
+        <CustomButton title="MON JOURNAL" onPress={() => navigation.navigate('Journal')} />
+        <CustomButton title="MON QUOTIDIEN" onPress={() => navigation.navigate('Quotidien')} />
+        <CustomButton title="MES SUCCÈS" onPress={() => navigation.navigate('Succès')} />
+        <CustomButton title="MES ANTI-STRESS" onPress={() => navigation.navigate('Anti-stress')} />
+        <CustomButton title="MON HISTOIRE" onPress={() => navigation.navigate('Histoire')} />
+        <CustomButton title="MES RDV" onPress={() => navigation.navigate('Rdv')} />
       </View>
       <View style={{ flexDirection: 'row', marginTop: 20 }}>
         <TouchableOpacity><Text style={{ color: '#FFBF47', marginRight: 10 }}>US</Text></TouchableOpacity>
@@ -64,7 +65,8 @@ function App() {
         <Stack.Screen name="Succès" component={SuccesScreen} />
         <Stack.Screen name="Anti-stress" component={AntistressScreen} />
         <Stack.Screen name="Histoire" component={HistoireScreen} />
-        {/* Ajoutez les autres écrans ici */}
+        <Stack.Screen name="Rdv" component={RdvScreen} />
+       
       </Stack.Navigator>
     </NavigationContainer>
   );

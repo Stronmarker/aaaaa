@@ -34,6 +34,9 @@ const SuccesScreen = () => (
             <Button text=" Objectif 2 " />
             <Button text=" Objectif 3 " />
         </View>
+        <View style={styles.buttonContainer}>
+            <Button text="CREER UN OBJECTIF"/>
+        </View>
         <View style={styles.footer}>
             <TouchableOpacity>
                 <Text style={styles.footerText}>US</Text>
@@ -81,6 +84,7 @@ const styles = StyleSheet.create({
       flexWrap: 'wrap',
       width: '100%',
       justifyContent: 'center',
+      
     },
     button: {
       width: '85%',

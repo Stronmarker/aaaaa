@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 function HistoireScreen() {
   // Contenu de l'histoire
@@ -19,6 +19,17 @@ function HistoireScreen() {
         <Text style={styles.sectionTitle}>Mes leçons</Text>
         <Text style={styles.sectionText}>{histoire.lessons}</Text>
       </View>
+      <View style={styles.footer}>
+            <TouchableOpacity>
+                <Text style={styles.footerText}>US</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text style={styles.footer}>MENTIONS LÉGALES</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text style={styles.footerText}>CVG</Text>
+            </TouchableOpacity>
+        </View>
     </View>
   );
 }
@@ -29,10 +40,11 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#ff925c',
   },
   section: {
     marginBottom: 20,
@@ -44,6 +56,18 @@ const styles = StyleSheet.create({
   },
   sectionText: {
     fontSize: 16,
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#DDD',
+    width: '100%',
+  },
+  footerText: {
+    color: '#ff925c',
   },
 });
 

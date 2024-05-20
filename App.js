@@ -16,7 +16,7 @@ import RdvScreen from './Rdv';
 function AccueilScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20 }}>ACCUEIL</Text>
+      <Text style={{ fontSize: 50, fontWeight: 'bold', marginBottom: 20, color: '#ff925c' }}>ACCUEIL</Text>
       <View style={{ marginBottom: 20 }}>
         <Text>BloomYou : Bonjour</Text>
         <Text>Autre texte ici</Text>
@@ -31,9 +31,9 @@ function AccueilScreen({ navigation }) {
         <CustomButton title="MON HISTOIRE" onPress={() => navigation.navigate('Histoire')} />
         <CustomButton title="MES RDV" onPress={() => navigation.navigate('Rdv')} />
       </View>
-      <View style={{ flexDirection: 'row', marginTop: 20 }}>
-        <TouchableOpacity><Text style={{ color: '#FFBF47', marginRight: 10 }}>US</Text></TouchableOpacity>
-        <TouchableOpacity><Text style={{ color: '#FFBF47', marginRight: 10 }}>MENTIONS LÉGALES</Text></TouchableOpacity>
+      <View style={{ flexDirection: 'row', marginTop: 100 }}>
+        <TouchableOpacity><Text style={{ color: '#FFBF47', marginRight: 50 }}>US</Text></TouchableOpacity>
+        <TouchableOpacity><Text style={{ color: 'black', marginRight: 50 }}>MENTIONS LÉGALES</Text></TouchableOpacity>
         <TouchableOpacity><Text style={{ color: '#FFBF47' }}>CVG</Text></TouchableOpacity>
       </View>
     </View>

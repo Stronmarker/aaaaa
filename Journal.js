@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importation du hook de navigation
+import  BackgroundImage  from './Images/joie.png';
 
 function JournalScreen() {
   const [problems, setProblems] = useState('');
@@ -18,6 +19,7 @@ function JournalScreen() {
   };
 
   return (
+    <ImageBackground source={BackgroundImage} style={styles.BackgroundImage}>
     <View style={styles.container}>
       <Text style={styles.title}>Mon journal</Text>
       <View style={styles.formContainer}>
@@ -40,23 +42,43 @@ function JournalScreen() {
         <Text style={styles.buttonText}>Enregistrer</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.viewHistoryButton} onPress={goToHistoireScreen}>
-        <Text style={styles.buttonText}>Voir mon histoire</Text>
+        <Text style={styles.buttonText}>Afficher mon journal</Text>
       </TouchableOpacity>
+      <View style={styles.footer}>
+            <TouchableOpacity>
+                <Text style={styles.footerText}>US</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text style={styles.footer}>MENTIONS LÉGALES</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text style={styles.footerText}>CVG</Text>
+            </TouchableOpacity>
+        </View>
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+BackgroundImage: {
+  flex: 1,
+  resizeMode: 'cover',
+  justifyContent: 'center',
+},
+
   container: {
     flex: 1,
     padding: 20,
     justifyContent: 'center',
+    
   },
   title: {
-    fontSize: 24,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#ff925c',
   },
   formContainer: {
     marginBottom: 20,
@@ -70,21 +92,33 @@ const styles = StyleSheet.create({
     minHeight: 100, // Hauteur minimale de la zone de texte
   },
   saveButton: {
-    backgroundColor: '#4F46E5',
+    backgroundColor: '#FFBF47',
     padding: 10,
     borderRadius: 10,
     marginBottom: 10,
   },
   viewHistoryButton: {
-    backgroundColor: '#4F46E5',
+    backgroundColor: '#FFBF47',
     padding: 10,
     borderRadius: 10,
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#DDD',
+    width: '100%',
+  },
+  footerText: {
+    color: '#ff925c',
+  },
+
 });
 
 export default JournalScreen;

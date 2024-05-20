@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground} from 'react-native';
 import { LineChart } from 'react-native-chart-kit'; // Tableau & Graphique
 import { Picker } from 'emoji-mart'; // Importation des émojis
 import { useNavigation } from '@react-navigation/native'; // Importation du hook de navigation
+import  BackgroundImage  from './Images/joie.png';
 
 const QuotidienScreen = () => {
   const navigation = useNavigation(); // Utilisation du hook de navigation
@@ -48,6 +49,7 @@ const QuotidienScreen = () => {
   };
 
   return (
+    <ImageBackground source={BackgroundImage} style={styles.BackgroundImage}>
     <View style={styles.container}>
       {/* Balise "Aujourd'hui je me sens" */}
       <Text style={styles.chartTitle}>Aujourd'hui je me sens</Text>
@@ -104,13 +106,24 @@ const QuotidienScreen = () => {
       </TouchableOpacity>
 
     <TouchableOpacity style={styles.navigationButton} onPress={() => navigation.navigate('Succès')}>
-    <Text style={styles.navigationButtonText}>Voir mes Succes</Text>
+    <Text style={styles.navigationButtonText}>Mes Succès</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.navigationButton} onPress={() => navigation.navigate('Anti-stress')}>
+    <Text style={styles.navigationButtonText}>Mes Exercices de Relaxation</Text>
   </TouchableOpacity>
 </View>
+</ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+
+  BackgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+  
   container: {
     flex: 1,
     alignItems: 'center',
@@ -132,23 +145,23 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
   resetButton: {
-    backgroundColor: '#4F46E5',
+    backgroundColor: '#FFBF47',
     padding: 10,
     marginVertical: 10,
     borderRadius: 10,
   },
   resetButtonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
   },
   navigationButton: {
-    backgroundColor: '#4F46E5',
+    backgroundColor: '#FFBF47',
     padding: 10,
     marginVertical: 10,
     borderRadius: 10,
   },
   navigationButtonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
   },
   chartContainer: {

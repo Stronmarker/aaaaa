@@ -24,11 +24,8 @@ function AccueilScreen({ navigation }) {
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
         <CustomButton title="MES PARCOURS" onPress={() => navigation.navigate('Parcours')} />
         <CustomButton title="LA COMMUNAUTÉ" onPress={() => navigation.navigate('Communauté')} />
-        <CustomButton title="MON JOURNAL" onPress={() => navigation.navigate('Journal')} />
         <CustomButton title="MON QUOTIDIEN" onPress={() => navigation.navigate('Quotidien')} />
-        <CustomButton title="MES SUCCÈS" onPress={() => navigation.navigate('Succès')} />
         <CustomButton title="MES ANTI-STRESS" onPress={() => navigation.navigate('Anti-stress')} />
-        <CustomButton title="MON HISTOIRE" onPress={() => navigation.navigate('Histoire')} />
         <CustomButton title="MES RDV" onPress={() => navigation.navigate('Rdv')} />
       </View>
       <View style={{ flexDirection: 'row', marginTop: 20 }}>
